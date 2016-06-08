@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<!-- @todo:
+  1. Display weather in a responsive manner
+  2. Change background color based on weather type (jQuery)
+ -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/index.css">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="./script/index.js"></script>
+
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="container-fluid text-center">
+      <div id="weather-container">
+          <label>Imperial</label>
+          <input id="imp" name="temperature" type="radio" value="imperial"/>
+          <label>Metric</label>
+          <input id="met" name="temperature" type="radio" value="metric" />
+        <div id="search-container">
+          <input id="city" type="search" minlength=2 maxlength=25 size=30 placeholder="Pittsburgh, PA" />
+          <input id="search-btn" class="btn btn-default" type="button" value="Search" />
+        </div>
+        <p id="weather-current">Loading...</p>
+        <p id="weather-forecast"></p>
+      </div>
+    </div>
+  </body>
+</html>

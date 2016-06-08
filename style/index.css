@@ -1,0 +1,19 @@
+body {
+  background-color: #0079D9; }
+
+.container-fluid {
+  display: table;
+  margin: 0 auto;
+  padding-top: 3em; }
+  .container-fluid #city {
+    padding: .22em; }
+  .container-fluid div {
+    padding-top: 1em;
+    padding-bottom: 1em; }
+
+#weather-current {
+  color: #FFFFFF;
+  font-size: 2em;
+  margin-top: 1em; }
+
+/*# sourceMappingURL=index.css.map */

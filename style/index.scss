@@ -1,0 +1,26 @@
+// Main styles here
+// index.js will modify values as needed
+body{
+  background-color: #0079D9;
+}
+
+.container-fluid{
+  display: table;
+  margin: 0 auto;
+  padding-top: 3em;
+
+  #city{
+    padding: .22em;
+  }
+
+  div{
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
+
+#weather-current{
+  color: #FFFFFF;
+  font-size: 2em;
+  margin-top: 1em;
+}
