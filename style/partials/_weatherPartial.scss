@@ -1,0 +1,38 @@
+$navy:    #001f3f;  // Rain
+$blue:    #0074D9;  // Clear
+$teal:    #39CCCC;  // Drizzle
+$yellow:  #FFDC00;  // T Storm
+$red:     #FF4136;  // Severe
+$gray:    #AAAAAA;  // Clouds
+$silver:  #DDDDDD;  // Clouds
+$white:   #FFFFFF;  // Snow
+$black:   #111111;
+
+.weatherRain{
+  background-color: $navy;
+  color: $white;
+}
+.weatherClear{
+  background-color: $blue;
+  color: $white;
+}
+.weatherDrizzle{
+  background-color: $teal;
+  color: $white;
+}
+.weatherTstorm{
+  background-color: $yellow;
+  color: $black;
+}
+.weatherSevere{
+  background-color: $red;
+  color: $black;
+}
+.weatherClouds{
+  background-color: $gray;
+  color: $black;
+}
+.weatherSnow{
+  background-color: $white;
+  color: $black;
+}

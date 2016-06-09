@@ -1,13 +1,31 @@
-// Main styles here
-// index.js will modify values as needed
-body{
-  background-color: #0079D9;
-}
+@import './partials/_weatherPartial';
 
+$navy:    #001f3f;  // Rain
+$blue:    #0074D9;  // Clear
+$teal:    #39CCCC;  // Drizzle
+$yellow:  #FFDC00;  // T Storm
+$red:     #FF4136;  // Severe
+$gray:    #AAAAAA;  // Clouds
+$silver:  #DDDDDD;  // Clouds
+$white:   #FFFFFF;  // Snow
+$black:   #111111;
+
+body{
+  background-color: $blue;
+
+  #credits{
+    color: $white;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
 .container-fluid{
   display: table;
   margin: 0 auto;
-  padding-top: 3em;
+  padding-top: 2em;
 
   #city{
     padding: .22em;
@@ -18,9 +36,23 @@ body{
     padding-bottom: 1em;
   }
 }
+#weather-container{
+  color: $white;
 
-#weather-current{
-  color: #FFFFFF;
-  font-size: 2em;
-  margin-top: 1em;
+  label{
+    margin-left: 1em;
+  }
+
+  #search-container{
+    color: $black;
+
+    #city{
+      margin: 4px;
+    }
+  }
+
+  #weather-current{
+    font-size: 1.75em;
+    margin-top: 1em;
+  }
 }

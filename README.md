@@ -6,6 +6,6 @@ A working demo of this can be found on my CodePen.
 
 I built ModernOpenWeather using jQuery, Bootstrap and SASS and leveraged the OpenWeather API via Ajax and JSON.
 
-### Future Features
-1. Through jQuery, I plan to change the background color and font color dynamically based on the Weather ID I get
-back from the API call.
+### To Do
+1. Ensure accuracy of color changes based on weatherId that the API call responds with. There seems to be a little
+variance in ID 800, for example. Not sure if anything can be done about this.
