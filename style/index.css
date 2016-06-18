@@ -37,7 +37,7 @@ body {
 .container-fluid {
   display: table;
   margin: 0 auto;
-  padding-top: 2em; }
+  padding-top: 4em; }
   .container-fluid #city {
     padding: .22em; }
   .container-fluid div {
@@ -52,8 +52,7 @@ body {
     color: #111111; }
     #weather-container #search-container #city {
       margin: 4px; }
-  #weather-container #weather-current {
-    font-size: 1.75em;
-    margin-top: 1em; }
+  #weather-container #weather-current, #weather-container #weather-forecast {
+    font-size: 1.75em; }
 
 /*# sourceMappingURL=index.css.map */

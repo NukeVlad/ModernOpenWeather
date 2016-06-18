@@ -1,7 +1,9 @@
 // @todo:
-// Fill in forecast information maybe for the next 12 hours or something
-var units = "imperial";
-var city  = "Pittsburgh";
+// Condense API calls so only one is made instead of two
+// Remove search-btn unless on mobile
+var apiKey  = "6038e3bba1a2677c56d94e2ee755c41b";
+var units   = "imperial";
+var city    = "Pittsburgh";
 var weatherId;
 
 $(document).ready(function(){
@@ -33,20 +35,29 @@ function getWeather(cityName){
   }
   // current day  - .../data/2.5/weather?id=123456 + &APPID...
   // forecast     - .../data/2.5/forecast?q=London...
-  var url = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=" + units +
-    "&APPID=6038e3bba1a2677c56d94e2ee755c41b";
+  var currUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=" + units +
+    "&APPID=" + apiKey;
 
-  $.getJSON(url, function(data){
+  var foreUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&units=" + units +
+    "&APPID=" + apiKey;
+
+  $.getJSON(currUrl, function(data){
     $("#weather-current").text("The weather in " + data.name + " is currently " + data.weather[0].description +
-     " with a temperature of " + data.main.temp + "°. Wind speed is currently " + data.wind.speed + ".");
+     " with a temperature of " + data.main.temp + "° (" + data.main.temp_max + "°/ " + data.main.temp_min + "°).");
 
       weatherId = data.weather[0].id;
+  })
+
+  $.getJSON(foreUrl, function(data){
+    // API JSON response comes with an array called list. Each item it list is a three hour block of time:
+    // list[0] - three hours from API call, list[1] - six hours from API call. The whole array will give the next
+    // five days.
+    $("#weather-forecast").text("In three hours, you can expect to see " + data.list[0].weather[0].description +
+    " with a temperature near " + data.list[0].main.temp + "°");
   })
 }
 
 function changeBackground(weatherId){
-  // console.log(weatherId);
-
   if(weatherId >= 200 && weatherId <= 232){
     $("body").attr("class", "weatherTstorm");
   } else if(weatherId >= 300 && weatherId <= 321){
