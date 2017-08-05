@@ -2,7 +2,9 @@
 A stylish front end build around the OpenWeather API that I built for a FreeCodeCamp Challenge.
 It was uploaded mid-build because I decided it was something I wanted to show off.
 
-A working demo of this can be found on my [CodePen](http://codepen.io/source-decay/full/YWwZBQ/).
+An example of the UI for this can be found on my [CodePen](http://codepen.io/source-decay/full/YWwZBQ/).
+However, since passing around API keys in no-beuno, __you'll need to sign up for your own OpenWeatherMap API Key
+to see what all ModernOpenWeather can do.__
 
 I built ModernOpenWeather using jQuery, Bootstrap and SASS and leveraged the OpenWeather API via Ajax and JSON.
 When ModernOpenWeather receives the API request, the current weather information will update appropriately and
