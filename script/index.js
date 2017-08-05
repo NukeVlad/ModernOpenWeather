@@ -1,7 +1,7 @@
 // @todo:
 // Condense API calls so only one is made instead of two
 // Remove search-btn unless on mobile
-var apiKey  = "6038e3bba1a2677c56d94e2ee755c41b";
+var apiKey  = "";
 var units   = "imperial";
 var city    = "Pittsburgh";
 var weatherId;
